@@ -1,17 +1,19 @@
-# JavaScript标准样式
+# JavaScript Standard Style
 
-Translations: [Português](docs/RULES-ptbr.md), [Spanish](docs/RULES-esla.md)
+Translations: [Português](docs/RULES-ptbr.md), [Spanish](docs/RULES-esla.md), [繁體中文](docs/RULES-zhtw.md)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 This is a TL;DR of the [standard](https://github.com/feross/standard) JavaScript
 rules.
 
-学习 `规范` 的最好方法就是安装它，然后尝试一下
+The best way to learn about `standard` is to just install it and give it a try on
+your code.
 
-## 规则
+## Rules
 
-* **使用2个空格** 缩进。       
+* **Use 2 spaces** for indentation.
+
   eslint: [`indent`](http://eslint.org/docs/rules/indent)
 
   ```js
@@ -20,7 +22,7 @@ rules.
   }
   ```
 
-* **字符串使用单引号** 为避免转义。
+* **Use single quotes for strings** except to avoid escaping.
 
   eslint: [`quotes`](http://eslint.org/docs/rules/quotes)
 
@@ -29,7 +31,7 @@ rules.
   $("<div class='box'>")
   ```
 
-* **没有未使用的变量。**
+* **No unused variables.**
 
   eslint: [`no-unused-vars`](http://eslint.org/docs/rules/no-unused-vars)
 
@@ -39,7 +41,7 @@ rules.
   }
   ```
 
-* **关键字后面添加一个空格。**
+* **Add a space after keywords.**
 
   eslint: [`keyword-spacing`](http://eslint.org/docs/rules/keyword-spacing)
 
@@ -48,7 +50,7 @@ rules.
   if(condition) { ... }    // ✗ avoid
   ```
 
-* **在函数声明括号之前添加空格。**
+* **Add a space before a function declaration's parentheses.**
 
   eslint: [`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren)
 
@@ -60,8 +62,8 @@ rules.
   run(function() { ... })       // ✗ avoid
   ```
 
-* **始终使用** `===` 而不是 `==`.<br>
-  例外: `obj == null` 允许检查 `null || undefined`。
+* **Always use** `===` instead of `==`.<br>
+  Exception: `obj == null` is allowed to check for `null || undefined`.
 
   eslint: [`eqeqeq`](http://eslint.org/docs/rules/eqeqeq)
 
@@ -76,7 +78,6 @@ rules.
   ```
 
 * **Infix operators** must be spaced.
-* ？**插入运算符** 必须间隔。
 
   eslint: [`space-infix-ops`](http://eslint.org/docs/rules/space-infix-ops)
 
@@ -92,7 +93,7 @@ rules.
   var message = 'hello, '+name+'!'
   ```
 
-* **逗号后面应该有一个空格。**
+* **Commas should have a space** after them.
 
   eslint: [`comma-spacing`](http://eslint.org/docs/rules/comma-spacing)
 
@@ -108,7 +109,7 @@ rules.
   function greet (name,options) { ... }
   ```
 
-* **将else语句** 与大括号放在同一行。
+* **Keep else statements** on the same line as their curly braces.
 
   eslint: [`brace-style`](http://eslint.org/docs/rules/brace-style)
 
@@ -131,7 +132,7 @@ rules.
   }
   ```
 
-* **对于多行if语句，** 请使用花括号。
+* **For multi-line if statements,** use curly braces.
 
   eslint: [`curly`](http://eslint.org/docs/rules/curly)
 
@@ -153,7 +154,7 @@ rules.
     console.log('done')
   ```
 
-* **始终处理** `err` 函数参数.
+* **Always handle the** `err` function parameter.
 
   eslint: [`handle-callback-err`](http://eslint.org/docs/rules/handle-callback-err)
   ```js
@@ -173,8 +174,6 @@ rules.
 
 * **Always prefix browser globals** with `window.`.<br>
   Exceptions are: `document`, `console` and `navigator`.
-* ？**始终使用** `window` **为浏览器全局变量前缀**。<br>
-  例外是: `document`, `console` 和 `navigator`.
 
   eslint: [`no-undef`](http://eslint.org/docs/rules/no-undef)
 
@@ -182,7 +181,7 @@ rules.
   window.alert('hi')   // ✓ ok
   ```
 
-* **不允许多个空行。**
+* **Multiple blank lines not allowed.**
 
   eslint: [`no-multiple-empty-lines`](http://eslint.org/docs/rules/no-multiple-empty-lines)
 
@@ -201,7 +200,6 @@ rules.
   ```
 
 * **For the ternary operator** in a multi-line setting, place `?` and `:` on their own lines.
-* ？**对于三元运算符** 的多行写法， 将 `?` 和 `:` 置于自己的行上.
 
   eslint: [`operator-linebreak`](http://eslint.org/docs/rules/operator-linebreak)
 
@@ -220,7 +218,7 @@ rules.
     'www.api.com'
   ```
 
-* **对于 var 声明，** 将每个声明写在其自己的语句中。
+* **For var declarations,** write each declaration in its own statement.
 
   eslint: [`one-var`](http://eslint.org/docs/rules/one-var)
 
@@ -237,7 +235,7 @@ rules.
       verbose = true
   ```
 
-* 用附加的圆括号 **包裹条件赋值**。这表明，表达的是故意赋值 (`=`) ， 而不是等号 (`===`) 的打字错误。
+* **Wrap conditional assignments** with additional parentheses. This makes it clear that the expression is intentionally an assignment (`=`) rather than a typo for equality (`===`).
 
   eslint: [`no-cond-assign`](http://eslint.org/docs/rules/no-cond-assign)
 
@@ -253,7 +251,7 @@ rules.
   }
   ```
 
-* **在单行块内添加空格。**
+* **Add spaces inside single line blocks.**
 
   eslint: [`block-spacing`](http://eslint.org/docs/rules/block-spacing)
 
@@ -262,7 +260,7 @@ rules.
     function foo () { return true }  // ✓ ok
   ```
 
-* **变量和函数使用驼峰式命名。**
+* **Use camelcase when naming variables and functions.**
 
   eslint: [`camelcase`](http://eslint.org/docs/rules/camelcase)
 
@@ -274,7 +272,7 @@ rules.
     var myVar = 'hello'            // ✓ ok
   ```
 
-* **不允许逗号结尾.**
+* **Trailing commas not allowed.**
 
   eslint: [`comma-dangle`](http://eslint.org/docs/rules/comma-dangle)
 
@@ -284,7 +282,7 @@ rules.
     }
   ```
 
-* **逗号必须放在当前行的末尾。**
+* **Commas must be placed at the end of the current line.**
 
   eslint: [`comma-style`](http://eslint.org/docs/rules/comma-style)
 
@@ -300,7 +298,7 @@ rules.
     }
   ```
 
-* **点应该与属性在同一行。**
+* **Dot should be on the same line as property.**
 
   eslint: [`dot-location`](http://eslint.org/docs/rules/dot-location)
 
@@ -317,7 +315,6 @@ rules.
   elint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
 
 * **No space between function identifiers and their invocations.**
-* **？函数标识符与其调用之间没有空格。**
 
   eslint: [`func-call-spacing`](http://eslint.org/docs/rules/func-call-spacing)
 
@@ -326,7 +323,7 @@ rules.
   console.log('hello')  // ✓ ok
   ```
 
-* **在键值对中的冒号和值之间添加空格。**
+* **Add space between colon and value in key value pairs.**
 
   eslint: [`key-spacing`](http://eslint.org/docs/rules/key-spacing)
 
@@ -337,7 +334,7 @@ rules.
   var obj = { 'key': 'value' }     // ✓ ok
   ```
 
-* **构造函数名称必须以大写字母开头。**
+* **Constructor names must begin with a capital letter.**
 
   eslint: [`new-cap`](http://eslint.org/docs/rules/new-cap)
 
@@ -349,7 +346,7 @@ rules.
   var dog = new Animal()    // ✓ ok
   ```
 
-* **无参数的构造函数必须用括号调用。**
+* **Constructor with no arguments must be invoked with parentheses.**
 
   eslint: [`new-parens`](http://eslint.org/docs/rules/new-parens)
 
@@ -359,7 +356,7 @@ rules.
   var dog = new Animal()  // ✓ ok
   ```
 
-* **当定义setter时，对象必须包含getter**
+* **Objects must contain a getter when a setter is defined.**
 
   eslint: [`accessor-pairs`](http://eslint.org/docs/rules/accessor-pairs)
 
@@ -380,7 +377,7 @@ rules.
   }
   ```
 
-* **派生类的构造函数必须调用super。**
+* **Constructors of derived classes must call `super`.**
 
   eslint: [`constructor-super`](http://eslint.org/docs/rules/constructor-super)
 
@@ -398,7 +395,7 @@ rules.
   }
   ```
 
-* **使用数组常量而不是数组构造函数。**
+* **Use array literals instead of array constructors.**
 
   eslint: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor)
 
@@ -407,7 +404,7 @@ rules.
   var nums = [1, 2, 3]            // ✓ ok
   ```
 
-* **禁止使用 arguments.callee 和 arguments.caller。** 他们在未来版本的javascript已弃用，并且在ECMAScript 5在严格模式下被禁止使用。
+* **Avoid using `arguments.callee` and `arguments.caller`.**
 
   eslint: [`no-caller`](http://eslint.org/docs/rules/no-caller)
 
@@ -425,7 +422,7 @@ rules.
   }
   ```
 
-* **避免修改类声明的变量。**
+* **Avoid modifying variables of class declarations.**
 
   eslint: [`no-class-assign`](http://eslint.org/docs/rules/no-class-assign)
 
@@ -434,7 +431,7 @@ rules.
   Dog = 'Fido'    // ✗ avoid
   ```
 
-* **避免修改使用 const 声明的变量。**
+* **Avoid modifying variables declared using `const`.**
 
   eslint: [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign)
 
@@ -444,7 +441,6 @@ rules.
   ```
 
 * **Avoid using constant expressions in conditions (except loops).**
-* **避免在条件中使用常量表达式（除了循环）。**
 
   eslint: [`no-constant-condition`](http://eslint.org/docs/rules/no-constant-condition)
 
@@ -462,8 +458,7 @@ rules.
   }
   ```
 
-* **No control characters in regular expressions**
-* **？禁止正则表达式中的控制字符**
+* **No control characters in regular expressions.**
 
   eslint: [`no-control-regex`](http://eslint.org/docs/rules/no-control-regex)
 
@@ -472,7 +467,7 @@ rules.
   var pattern = /\x20/    // ✓ ok
   ```
 
-* **没有 `debugger` 语句。**
+* **No `debugger` statements.**
 
   eslint: [`no-debugger`](http://eslint.org/docs/rules/no-debugger)
 
@@ -483,7 +478,7 @@ rules.
   }
   ```
 
-* **不在变量上做删除操作。** 删除操作的目的是从一个对象上消除一个属性。使用delete操作符变量可能会导致意外的行为。
+* **No `delete` operator on variables.**
 
   eslint: [`no-delete-var`](http://eslint.org/docs/rules/no-delete-var)
 
@@ -492,7 +487,7 @@ rules.
   delete name     // ✗ avoid
   ```
 
-* **函数定义中没有重复的参数。**
+* **No duplicate arguments in function definitions.**
 
   eslint: [`no-dupe-args`](http://eslint.org/docs/rules/no-dupe-args)
 
@@ -506,7 +501,7 @@ rules.
   }
   ```
 
-* **类成员中没有重复的名称。**
+* **No duplicate name in class members.**
 
   eslint: [`no-dupe-class-members`](http://eslint.org/docs/rules/no-dupe-class-members)
 
@@ -517,7 +512,7 @@ rules.
   }
   ```
 
-* **对象字面量中没有重复的键。**
+* **No duplicate keys in object literals.**
 
   eslint: [`no-dupe-keys`](http://eslint.org/docs/rules/no-dupe-keys)
 
@@ -528,7 +523,7 @@ rules.
   }
   ```
 
-* **`switch`语句中没有重复的`case`标签。**
+* **No duplicate `case` labels in `switch` statements.**
 
   eslint: [`no-duplicate-case`](http://eslint.org/docs/rules/no-duplicate-case)
 
@@ -540,7 +535,7 @@ rules.
   }
   ```
 
-* **每个模块使用一个导入语句。**
+* **Use a single import statement per module.**
 
   eslint: [`no-duplicate-imports`](http://eslint.org/docs/rules/no-duplicate-imports)
 
@@ -561,7 +556,6 @@ rules.
   ```
 
 * **No empty destructuring patterns.**
-* **没有空的解构模式。**
 
   eslint: [`no-empty-pattern`](http://eslint.org/docs/rules/no-empty-pattern)
 
@@ -570,7 +564,7 @@ rules.
   const { a: { b } } = foo      // ✓ ok
   ```
 
-* **不使用 `eval()`.**
+* **No using `eval()`.**
 
   eslint: [`no-eval`](http://eslint.org/docs/rules/no-eval)
 
@@ -913,7 +907,7 @@ rules.
 
   ```js
   const regexp = /test   value/   // ✗ avoid
-  
+
   const regexp = /test {3}value/  // ✓ ok
   const regexp = /test value/     // ✓ ok
   ```
@@ -1146,7 +1140,7 @@ rules.
   }
 
   const user = { name: 'Jane Doe', age: 30, username: 'jdoe86' }    // ✓ ok
-  
+
   const user = {
     name: 'Jane Doe',
     age: 30,
@@ -1222,7 +1216,7 @@ rules.
   ```js
   //comment           // ✗ avoid
   // comment          // ✓ ok
-  
+
   /*comment*/         // ✗ avoid
   /* comment */       // ✓ ok
   ```
